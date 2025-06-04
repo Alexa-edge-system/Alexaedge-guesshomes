@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AlexaEdge Guest Homes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Welcome to AlexaEdge Guest Homes</h1>
+    <div class="container">
+        <ul>
+            <li th:each="property : ${properties}">
+                <img th:src="${property.imageUrl}" alt="Property Image">
+                <h2 th:text="${property.name}"></h2>
+                <p th:text="${property.location}"></p>
+                <p>Price: $<span th:text="${property.price}"></span>/night</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
